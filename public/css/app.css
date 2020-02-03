@@ -1,0 +1,28 @@
+body {
+	background: url('../img/fondo2.jpg');
+
+  background-attachment: fixed;
+  
+}
+
+@media screen and (max-width: 992px) {
+  body {
+	background: url('../img/fondo.png');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+body {
+	background: url('../img/fondo.png');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+}
+
