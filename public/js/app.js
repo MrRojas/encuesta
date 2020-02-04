@@ -1852,6 +1852,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1865,8 +1870,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var _this = this;
 
   axios.get('/v/get/categories').then(function (response) {
-    return _this.categorias = response;
+    return _this.categorias = response.data;
   });
+  console.log(this.categorias);
 }));
 
 /***/ }),
@@ -37265,12 +37271,21 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.categorias, function(element) {
-      return _c("div", [
-        _c("h1", [_vm._v("\n        " + _vm._s(element) + "\n    ")])
-      ])
-    }),
-    0
+    { staticClass: "col-md-4 offset-md-4" },
+    [
+      _c("h3", { staticClass: "text-white" }, [_vm._v(" SELECCIONE ")]),
+      _vm._v(" "),
+      _c("h3", { staticClass: "text-white" }, [_vm._v(" EL TIPO DE CÁNCER ")]),
+      _vm._v(" "),
+      _vm._l(_vm.categorias, function(categoria) {
+        return _c("div", [
+          _c("button", { staticClass: "boton-per2 btn-block" }, [
+            _vm._v(_vm._s(categoria.name) + " ")
+          ])
+        ])
+      })
+    ],
+    2
   )
 }
 var staticRenderFns = []

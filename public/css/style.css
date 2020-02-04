@@ -26,6 +26,24 @@ body {
 
 }
 
+.boton-per2{
+  opacity: 0.9;
+  background: #cccdd8;
+  color: #2e3783;
+  border: 5px solid #403f83;
+  padding: 10px;
+  margin-bottom: 9px;
+  
+
+}
+.boton-per2:hover{
+
+  background: #9c0133; 
+  color: white;
+    border: 3px solid #403f83;
+
+}
+
 .boton-per:hover{
 
   background: #9c0133; 
