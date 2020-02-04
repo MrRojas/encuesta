@@ -28,11 +28,17 @@
                 }
               }, 
               mounted () {
+
+
                 axios
                 .get('/v/get/categories')
-                .then(response => (this.categorias = response.data))
+                .then(response =>  {
+                  this.categorias = response.data; 
+
+                  localStorage.categorias = this.categorias; 
+                })
 
                 console.log(this.categorias )
-          }
+            }
     }
 </script>

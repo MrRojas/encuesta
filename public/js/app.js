@@ -1870,7 +1870,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var _this = this;
 
   axios.get('/v/get/categories').then(function (response) {
-    return _this.categorias = response.data;
+    _this.categorias = response.data;
+    localStorage.categorias = _this.categorias;
   });
   console.log(this.categorias);
 }));
