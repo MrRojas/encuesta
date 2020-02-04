@@ -14,7 +14,7 @@
                           
 
                           
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required  autofocus placeholder="usuario">
+                                <input id="email" type="email" class="input-per  form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required  autofocus placeholder="Usuario:">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
                             
 
                         
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required  placeholder="Contraseña" >
+                                <input id="password" type="password" class="input-per form-control @error('password') is-invalid @enderror" name="password" required  placeholder="Contraseña:" >
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@
                      
 
                              <div class="form-group row">
-                                <button type="submit" class="btn btn-primary btn-block ">
+                                <button type="submit" class="btn boton-per btn-block ">
                                     {{ __('Login') }}
                                 </button>
 
