@@ -14,7 +14,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
+        return  response()->json( Categories::all()) ;
     }
 
     /**

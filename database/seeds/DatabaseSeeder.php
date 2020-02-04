@@ -12,7 +12,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      
+      	DB::table('users')->insert([
+            [  'id' => '1', 'name' => 'ArmandoRojas' , 'email' => 'rojasarmando260@gmail.com' , 'password' => bcrypt('12345678') ],
+    
+        
+           
+        ]);
+        /*
         DB::table('categories')->insert([
             [  'id' => '1', 'name' => 'Cancer Labio y Cavidad Oral'],
             [  'id' => '2', 'name' => 'Cancer de Faringe (nasofaringe, orofaringe e hipofaringe)'],
@@ -22,7 +28,7 @@ class DatabaseSeeder extends Seeder
             [  'id' => '6', 'name' => 'Cáncer de tiroides'],
         
            
-        ]);
+        ]);*/
 
           /*DB::table('subcategories')->insert([
             [  'id' => '1', 'name' => 'Cancer Labio y Cavidad Oral'],

@@ -17,9 +17,11 @@
                                 <input id="email" type="email" class="input-per  form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required  autofocus placeholder="Usuario:">
 
                                 @error('email')
+                                 <div class="col-xs-12">
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
+                                </div>
                                 @enderror
                             
                         </div>

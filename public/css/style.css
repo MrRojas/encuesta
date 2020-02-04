@@ -26,6 +26,14 @@ body {
 
 }
 
+.boton-per:hover{
+
+  background: #9c0133; 
+  color: white;
+    border: 3px solid #403f83;
+
+}
+
 .input-per::placeholder {
   
   color: #403f83;
