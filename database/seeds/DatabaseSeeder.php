@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         
            
         ]);
-        /*
+        
         DB::table('categories')->insert([
             [  'id' => '1', 'name' => 'Cancer Labio y Cavidad Oral'],
             [  'id' => '2', 'name' => 'Cancer de Faringe (nasofaringe, orofaringe e hipofaringe)'],
@@ -27,10 +27,10 @@ class DatabaseSeeder extends Seeder
             [  'id' => '5', 'name' => 'Cáncer de glándulas salivales'],
             [  'id' => '6', 'name' => 'Cáncer de tiroides'],
         
-           
-        ]);*/
+          
+        ]);
 
-          /*DB::table('subcategories')->insert([
+          DB::table('subcategories')->insert([
             [  'id' => '1', 'name' => 'Cancer Labio y Cavidad Oral'],
             [  'id' => '2', 'name' => 'Cancer de Faringe (nasofaringe, orofaringe e hipofaringe)'],
             [  'id' => '3', 'name' => 'Cáncer de laringe'],
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             [  'id' => '6', 'name' => 'Cáncer de tiroides'],
         
            
-        ]);*/
+        ]);
 
     }
 }
