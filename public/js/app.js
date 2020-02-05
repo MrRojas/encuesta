@@ -1838,6 +1838,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+var _mounted$data$mounted;
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -1857,7 +1859,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
+/* harmony default export */ __webpack_exports__["default"] = (_mounted$data$mounted = {
   mounted: function mounted() {
     console.log('Component mounted.');
   },
@@ -1866,7 +1868,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       categorias: null
     };
   }
-}, "mounted", function mounted() {
+}, _defineProperty(_mounted$data$mounted, "mounted", function mounted() {
   var _this = this;
 
   axios.get('/v/get/categories').then(function (response) {
@@ -1874,7 +1876,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     localStorage.categorias = _this.categorias;
   });
   console.log(this.categorias);
-}));
+}), _defineProperty(_mounted$data$mounted, "methods", {
+  saludar: function saludar(event) {
+    alert();
+  }
+}), _mounted$data$mounted);
 
 /***/ }),
 
@@ -37280,9 +37286,11 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.categorias, function(categoria) {
         return _c("div", [
-          _c("button", { staticClass: "boton-per2 btn-block" }, [
-            _vm._v(_vm._s(categoria.name) + " ")
-          ])
+          _c(
+            "button",
+            { staticClass: "boton-per2 btn-block", on: { click: _vm.saludar } },
+            [_vm._v(_vm._s(categoria.name) + " ")]
+          )
         ])
       })
     ],

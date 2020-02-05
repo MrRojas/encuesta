@@ -19,4 +19,6 @@ use Illuminate\Http\Request;
 
 
 Route::get('/get/categories', 'CategoriesController@index');
+Route::get('/get/subcategories', 'SubCategoriesController@index');
+Route::get('/get/questions', 'QuestionsController@index');
 

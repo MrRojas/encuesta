@@ -7,7 +7,7 @@
    <h3 class="text-white" > EL TIPO DE CÁNCER </h3>
 <div   v-for="categoria in categorias" >
   
-    <button class="boton-per2 btn-block">{{categoria.name}} </button> 
+    <button v-on:click="saludar" class="boton-per2 btn-block">{{categoria.name}} </button> 
  
 
 </div>
@@ -27,7 +27,7 @@
                   categorias: null
                 }
               }, 
-              mounted () {
+              mounted() {
 
 
                 axios
@@ -36,9 +36,15 @@
                   this.categorias = response.data; 
 
                   localStorage.categorias = this.categorias; 
-                })
+                }) 
+
 
                 console.log(this.categorias )
-            }
+            } ,
+        methods: {
+                saludar: function (event) {
+                    alert()
+                }
+        }
     }
 </script>

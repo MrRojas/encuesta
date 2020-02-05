@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\SubCategories;
+use App\SubCategories as M;
 use Illuminate\Http\Request;
 
 class SubCategoriesController extends Controller
@@ -14,7 +14,7 @@ class SubCategoriesController extends Controller
      */
     public function index()
     {
-        //
+        return  response()->json( M::all()) ;
     }
 
     /**

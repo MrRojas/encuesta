@@ -16,6 +16,8 @@ class AddQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('value' , 255)->default(' ');
+            $table->string('des' , 255)->default(' ');
+            $table->string('type' , 255)->default(' ');
             $table->string('status' , 1)->default('1');
             $table->string('subcategories_id' , 255)->default('0');
             $table->timestamps();
