@@ -22,7 +22,11 @@
      <div   v-for="pregunta in preguntas"  >
 
         <div class="col-md-12   text-justify text-blue"  style="font-size: 10px">
-          <button class="btn btn-res"> {{pregunta.value}}  </button> 
+          <div class="btn btn-res"> 
+         
+            <input type="checkbox" v-on:change="changeRequest(pregunta.id)"   >
+            </div> 
+             {{pregunta.value}}: 
              {{pregunta.des}} 
          </div>
 
@@ -36,7 +40,7 @@
       
     </dir>
     <div class="text-center">
-    <button class="btn btn-res2"> >  </button> 
+    <button class="btn btn-res2"  v-on:click="nextM" > >  </button> 
 </div>
 </div>
 
@@ -54,7 +58,10 @@
         data () {
                 return {
                   respuesta: null, 
-                  preguntas: null,
+                  preguntas: null, 
+                  respuestaT: [] 
+
+                 
                 }
               }, 
               mounted() {
@@ -91,13 +98,25 @@
                     return (e.type == 'T' && e.categories_id == pregunta.id )
                 })
 
-
-                console.log(this.preguntas); 
-                console.log(this.pregunta.categories_id)
+                
             } ,
         methods: {
-                saludar: function (event) {
-                    alert()
+                changeRequest: function (x , event ) {
+                  
+                  let validar = true 
+                    
+                  for (var i = this.respuestaT.length - 1; i >= 0; i--) {
+                   
+                     if(this.respuestaT[i] == x ) 
+                        validar = false 
+                  }
+
+                  if(validar)
+                    this.respuestaT.push(x)
+                    else
+                    this.respuestaT.pop(x)  
+
+                  console.log(this.respuestaT)
                 }
         }
     }

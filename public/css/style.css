@@ -96,7 +96,8 @@ body {
 .btn-res , .btn-res2 {
 
   background: #b82d56;
-  width: 48px;
+  width: 38px;
+
   border:  1px solid #484b5d;
   color: white;
    box-shadow: .5px .5px .5px 3px black;

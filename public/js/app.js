@@ -1959,6 +1959,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = (_mounted$data$mounted = {
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1966,7 +1970,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   data: function data() {
     return {
       respuesta: null,
-      preguntas: null
+      preguntas: null,
+      respuestaT: []
     };
   }
 }, _defineProperty(_mounted$data$mounted, "mounted", function mounted() {
@@ -1998,11 +2003,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     var pregunta = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this.pregunta;
     return e.type == 'T' && e.categories_id == pregunta.id;
   });
-  console.log(this.preguntas);
-  console.log(this.pregunta.categories_id);
 }), _defineProperty(_mounted$data$mounted, "methods", {
-  saludar: function saludar(event) {
-    alert();
+  changeRequest: function changeRequest(x, event) {
+    var validar = true;
+
+    for (var i = this.respuestaT.length - 1; i >= 0; i--) {
+      if (this.respuestaT[i] == x) validar = false;
+    }
+
+    if (validar) this.respuestaT.push(x);else this.respuestaT.pop(x);
+    console.log(this.respuestaT);
   }
 }), _mounted$data$mounted);
 
@@ -37480,11 +37490,22 @@ var render = function() {
                   staticStyle: { "font-size": "10px" }
                 },
                 [
-                  _c("button", { staticClass: "btn btn-res" }, [
-                    _vm._v(" " + _vm._s(pregunta.value) + "  ")
+                  _c("div", { staticClass: "btn btn-res" }, [
+                    _c("input", {
+                      attrs: { type: "checkbox" },
+                      on: {
+                        change: function($event) {
+                          return _vm.changeRequest(pregunta.id)
+                        }
+                      }
+                    })
                   ]),
                   _vm._v(
-                    " \n             " + _vm._s(pregunta.des) + " \n         "
+                    " \n             " +
+                      _vm._s(pregunta.value) +
+                      ": \n             " +
+                      _vm._s(pregunta.des) +
+                      " \n         "
                   )
                 ]
               ),
@@ -37493,7 +37514,13 @@ var render = function() {
             ])
           }),
           _vm._v(" "),
-          _vm._m(1)
+          _c("div", { staticClass: "text-center" }, [
+            _c(
+              "button",
+              { staticClass: "btn btn-res2", on: { click: _vm.nextM } },
+              [_vm._v(" >  ")]
+            )
+          ])
         ],
         2
       )
@@ -37519,14 +37546,6 @@ var staticRenderFns = [
       _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
         _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center" }, [
-      _c("button", { staticClass: "btn btn-res2" }, [_vm._v(" >  ")])
     ])
   }
 ]
