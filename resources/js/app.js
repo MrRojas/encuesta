@@ -3,7 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+ 
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -17,7 +17,8 @@ Vue.use(VueRouter);
 var router = new VueRouter({
   history: false,
   routes: [
-    { path: '/', name: 'home', component: require('./components/CategoriesComponent.vue').default },
+   		 { path: '/', name: 'home', component: require('./components/CategoriesComponent.vue').default },
+   		 { path: '/pt', name: 'pregunta-t', component: require('./components/PreguntaTComponent.vue').default },
     ],
 });
 
