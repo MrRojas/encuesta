@@ -86,14 +86,14 @@
 
                 this.preguntas = JSON.parse(localStorage.getItem("preguntas") )
 
-                this.preguntas = this.preguntas.filter( e => {
+                this.preguntas = this.preguntas.filter( (e , pregunta = this.pregunta) => {
 
-                    return (e.type == 'T')
+                    return (e.type == 'T' && e.categories_id == pregunta.id )
                 })
 
 
                 console.log(this.preguntas); 
-
+                console.log(this.pregunta.categories_id)
             } ,
         methods: {
                 saludar: function (event) {

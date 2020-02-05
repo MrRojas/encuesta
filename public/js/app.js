@@ -1970,6 +1970,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
   }
 }, _defineProperty(_mounted$data$mounted, "mounted", function mounted() {
+  var _this = this;
+
   if (!localStorage.categorias) {
     axios.get('/v/get/categories').then(function (response) {
       localStorage.setItem('categorias', JSON.stringify(response.data));
@@ -1993,9 +1995,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   this.respuesta.name = this.respuesta.name.replace(texto, "");
   this.preguntas = JSON.parse(localStorage.getItem("preguntas"));
   this.preguntas = this.preguntas.filter(function (e) {
-    return e.type == 'T';
+    var pregunta = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this.pregunta;
+    return e.type == 'T' && e.categories_id == pregunta.id;
   });
   console.log(this.preguntas);
+  console.log(this.pregunta.categories_id);
 }), _defineProperty(_mounted$data$mounted, "methods", {
   saludar: function saludar(event) {
     alert();
