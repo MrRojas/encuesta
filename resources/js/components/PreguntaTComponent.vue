@@ -6,13 +6,13 @@
   <h3 class="text-white" align="center"  style="width: 80%; margin-left: 10%"  > {{respuesta.name}} </h3>
   <div class="fondo-per" >
       <div class="row">
-      <div class="col-md-6 text-center text-blue"  >
+      <div class="col-sm-6 text-center text-blue"  >
         <span style="font-size: 40px">  T </span>  <span style="font-size: 20px">  umor </span>
       </div>
-      <div class="col-md-3  text-blue"  >
+      <div class="col-sm-3  text-blue"  >
         <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> N </b> </span>  
       </div>
-      <div class="col-md-3  text-blue"  >
+      <div class="col-sm-3  text-blue"  >
         <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> M </b> </span>  
       </div>
       </div>

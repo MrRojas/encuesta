@@ -37481,7 +37481,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-6 text-center text-blue" }, [
+      _c("div", { staticClass: "col-sm-6 text-center text-blue" }, [
         _c("span", { staticStyle: { "font-size": "40px" } }, [_vm._v("  T ")]),
         _vm._v(" "),
         _c("span", { staticStyle: { "font-size": "20px" } }, [
@@ -37489,13 +37489,13 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-3  text-blue" }, [
+      _c("div", { staticClass: "col-sm-3  text-blue" }, [
         _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
           _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" N ")])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-3  text-blue" }, [
+      _c("div", { staticClass: "col-sm-3  text-blue" }, [
         _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
           _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
         ])
