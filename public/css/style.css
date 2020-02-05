@@ -93,7 +93,7 @@ body {
 
 }
 
-.btn-res{
+.btn-res , .btn-res2 {
 
   background: #b82d56;
   width: 48px;
@@ -104,6 +104,11 @@ body {
    margin-right: 6px;
 
   
+}
+
+.btn-res2{
+  float: right;
+  margin-right: 3px;
 }
 
 @media screen and (max-width: 992px) {

@@ -1953,6 +1953,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = (_mounted$data$mounted = {
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37449,7 +37455,7 @@ var render = function() {
         "h3",
         {
           staticClass: "text-white",
-          staticStyle: { "margin-left": "10%" },
+          staticStyle: { "margin-left": "30%", "max-width": "60%" },
           attrs: { align: "center" }
         },
         [_vm._v(" " + _vm._s(_vm.respuesta.name) + " ")]
@@ -37481,7 +37487,9 @@ var render = function() {
               _vm._v(" "),
               _c("br")
             ])
-          })
+          }),
+          _vm._v(" "),
+          _vm._m(1)
         ],
         2
       )
@@ -37507,6 +37515,14 @@ var staticRenderFns = [
       _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
         _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("button", { staticClass: "btn btn-res2" }, [_vm._v(" >  ")])
     ])
   }
 ]

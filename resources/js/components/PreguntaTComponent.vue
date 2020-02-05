@@ -2,7 +2,7 @@
     <div class="row">
 <div class="col-md-4 offset-md-4">
   <br><br>
-  <h3 class="text-white" align="center" style=" margin-left: 10%; "  > {{respuesta.name}} </h3>
+  <h3 class="text-white" align="center" style=" margin-left: 30%; max-width: 60%; "  > {{respuesta.name}} </h3>
  
 
   <div class="fondo-per" >
@@ -32,6 +32,12 @@
      
 
     </div>
+   
+      
+    </dir>
+    <div class="text-center">
+    <button class="btn btn-res2"> >  </button> 
+</div>
 </div>
 
 </div>
