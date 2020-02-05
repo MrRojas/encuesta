@@ -1999,10 +1999,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var texto = "(nasofaringe,orofaringe e hipofaringe)";
   this.respuesta.name = this.respuesta.name.replace(texto, "");
   this.preguntas = JSON.parse(localStorage.getItem("preguntas"));
+  console.log(this.preguntas);
   this.preguntas = this.preguntas.filter(function (e) {
-    var pregunta = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this.pregunta;
-    return e.type == 'T' && e.categories_id == pregunta.id;
+    console.log(_this.respuesta.id);
+    if (e.type == 'T' && e.subcategories_id == _this.respuesta.id) return e;
   });
+  console.log(this.preguntas);
 }), _defineProperty(_mounted$data$mounted, "methods", {
   changeRequest: function changeRequest(x, event) {
     var validar = true;

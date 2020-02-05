@@ -93,10 +93,15 @@
 
                 this.preguntas = JSON.parse(localStorage.getItem("preguntas") )
 
-                this.preguntas = this.preguntas.filter( (e , pregunta = this.pregunta) => {
+                console.log(this.preguntas)
 
-                    return (e.type == 'T' && e.categories_id == pregunta.id )
+                this.preguntas = this.preguntas.filter( (e ) => {
+                    console.log(this.respuesta.id )
+                    if (e.type == 'T' && e.subcategories_id== this.respuesta.id )
+                      return e; 
                 })
+
+                console.log(this.preguntas)
 
                 
             } ,
