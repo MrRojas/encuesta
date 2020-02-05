@@ -9,10 +9,10 @@
    
  
       <div class="text-center text-blue"  >
-        <span style="font-size: 40px">T</span>  
-        <span style="font-size: 20px">umor primario</span>
+        <span style="font-size: 40px; color: #8481b6;">T</span>  
+      
      
-        <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> N </b> </span>  
+        <span style="font-size: 40px;"> <b style="padding: 0">N</b>òdulos</span>  
       
         <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> M </b> </span>  
       </div>

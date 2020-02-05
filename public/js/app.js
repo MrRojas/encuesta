@@ -2014,7 +2014,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   nextM: function nextM() {
     var respuestaT = JSON.stringify(this.respuestaT);
-    localStorage.setItem('respuestaM', respuestaT); //window.location.href = '#/pn'
+    localStorage.setItem('respuestaM', respuestaT);
+    window.location.href = '#/rt';
   }
 }), _mounted$data$mounted);
 
@@ -37777,18 +37778,17 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center text-blue" }, [
-      _c("span", { staticStyle: { "font-size": "40px" } }, [_vm._v("T")]),
-      _vm._v(" "),
-      _c("span", { staticStyle: { "font-size": "20px" } }, [
-        _vm._v("umor primario")
+      _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
+        _vm._v("T")
       ]),
       _vm._v(" "),
       _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
         _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" N ")])
       ]),
       _vm._v(" "),
-      _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
-        _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
+      _c("span", { staticStyle: { "font-size": "40px" } }, [
+        _c("b", { staticStyle: { padding: "0" } }, [_vm._v("M")]),
+        _vm._v("etasìs")
       ])
     ])
   }
@@ -37887,14 +37887,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center text-blue" }, [
-      _c("span", { staticStyle: { "font-size": "40px" } }, [_vm._v("T")]),
-      _vm._v(" "),
-      _c("span", { staticStyle: { "font-size": "20px" } }, [
-        _vm._v("umor primario")
+      _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
+        _vm._v("T")
       ]),
       _vm._v(" "),
-      _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
-        _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" N ")])
+      _c("span", { staticStyle: { "font-size": "40px" } }, [
+        _c("b", { staticStyle: { padding: "0" } }, [_vm._v("N")]),
+        _vm._v("òdulos")
       ]),
       _vm._v(" "),
       _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
