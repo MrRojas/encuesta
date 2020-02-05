@@ -97,7 +97,7 @@
 
                 this.preguntas = this.preguntas.filter( (e ) => {
              
-                    if (e.type == 'T' && e.subcategories_id== this.respuesta.id )
+                    if (e.type == 'M' && e.subcategories_id== this.respuesta.id )
                       return e; 
                 })
 
@@ -129,8 +129,8 @@
 
                     let respuestaT =  JSON.stringify(this.respuestaT)
                   
-                     localStorage.setItem('respuestaT', respuestaT ) ; 
-                     window.location.href = '#/pn'
+                     localStorage.setItem('respuestaM', respuestaT ) ; 
+                     //window.location.href = '#/pn'
                 }
         }
     }
