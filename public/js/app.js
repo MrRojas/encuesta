@@ -37453,15 +37453,20 @@ var render = function() {
       [
         _vm._m(0),
         _vm._v(" "),
-        _vm._l(_vm.preguntas, function(pregumta) {
+        _vm._l(_vm.preguntas, function(pregunta) {
           return _c("div", [
             _c(
               "div",
               {
                 staticClass: "col-md-12 text-justify text-blue",
-                staticStyle: { "font-size": "12px" }
+                staticStyle: { "font-size": "10px" }
               },
-              [_vm._v("\n        " + _vm._s(pregumta.des) + "\n      ")]
+              [
+                _c("button", { staticClass: "btn btn-res" }, [
+                  _vm._v(" " + _vm._s(pregunta.value) + "  ")
+                ]),
+                _vm._v(" " + _vm._s(pregunta.des) + "\n      ")
+              ]
             )
           ])
         })
@@ -37485,13 +37490,13 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-3  text-blue" }, [
-        _c("span", { staticStyle: { "font-size": "40px" } }, [
+        _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
           _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" N ")])
         ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-3  text-blue" }, [
-        _c("span", { staticStyle: { "font-size": "40px" } }, [
+        _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
           _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
         ])
       ])

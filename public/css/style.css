@@ -40,6 +40,11 @@ body {
   
 
 }
+
+.fondo-per{
+  border:  5px solid #484b5d;
+  box-shadow: inset 1px 1px 6px   #484b5d;
+}
 .boton-per2:hover{
 
   background: #403f83; 
@@ -79,6 +84,15 @@ body {
   text-align: center;
 
 
+}
+
+.btn-res{
+
+  background: #b82d56;
+  width: 48px;
+  border:  1px solid #484b5d;
+  color: white;
+   box-shadow: .5px .5px .5px 3px black;
 }
 
 @media screen and (max-width: 992px) {
