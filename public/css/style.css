@@ -44,6 +44,13 @@ body {
 .fondo-per{
   border:  5px solid #484b5d;
   box-shadow: inset 1px 1px 6px   #484b5d;
+  padding: 0px;
+  margin: auto;
+
+ 
+  overflow-y: auto;
+ 
+
 }
 .boton-per2:hover{
 
@@ -93,6 +100,10 @@ body {
   border:  1px solid #484b5d;
   color: white;
    box-shadow: .5px .5px .5px 3px black;
+   float: left;
+   margin-right: 6px;
+
+  
 }
 
 @media screen and (max-width: 992px) {
@@ -101,7 +112,16 @@ body {
 background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-}
+  }
+   .fondo-per{
+    max-height:  350px !important; 
+    max-width: 330px;
+    padding: 50px
+  
+    margin: auto;
+    overflow-y: auto;
+
+   }
 
 }
 
@@ -114,5 +134,12 @@ background-repeat: no-repeat;
   background-position: center;
 }
 
+.fondo-per{
+    max-height: 50%;
+    overflow-y: scroll;
+   }
+
 }
+
+
 

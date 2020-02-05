@@ -1947,6 +1947,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = (_mounted$data$mounted = {
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37434,45 +37440,52 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-4 offset-md-4" }, [
-    _c("br"),
-    _vm._v(" "),
-    _c(
-      "h3",
-      {
-        staticClass: "text-white",
-        staticStyle: { width: "80%", "margin-left": "10%" },
-        attrs: { align: "center" }
-      },
-      [_vm._v(" " + _vm._s(_vm.respuesta.name) + " ")]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "fondo-per" },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._l(_vm.preguntas, function(pregunta) {
-          return _c("div", [
-            _c(
-              "div",
-              {
-                staticClass: "col-md-12 text-justify text-blue",
-                staticStyle: { "font-size": "10px" }
-              },
-              [
-                _c("button", { staticClass: "btn btn-res" }, [
-                  _vm._v(" " + _vm._s(pregunta.value) + "  ")
-                ]),
-                _vm._v(" " + _vm._s(pregunta.des) + "\n      ")
-              ]
-            )
-          ])
-        })
-      ],
-      2
-    )
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-4 offset-md-4" }, [
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "h3",
+        {
+          staticClass: "text-white",
+          staticStyle: { "margin-left": "10%" },
+          attrs: { align: "center" }
+        },
+        [_vm._v(" " + _vm._s(_vm.respuesta.name) + " ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "fondo-per" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._l(_vm.preguntas, function(pregunta) {
+            return _c("div", [
+              _c(
+                "div",
+                {
+                  staticClass: "col-md-12   text-justify text-blue",
+                  staticStyle: { "font-size": "10px" }
+                },
+                [
+                  _c("button", { staticClass: "btn btn-res" }, [
+                    _vm._v(" " + _vm._s(pregunta.value) + "  ")
+                  ]),
+                  _vm._v(
+                    " \n             " + _vm._s(pregunta.des) + " \n         "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("br")
+            ])
+          })
+        ],
+        2
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -37480,25 +37493,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm-6 text-center text-blue" }, [
-        _c("span", { staticStyle: { "font-size": "40px" } }, [_vm._v("  T ")]),
-        _vm._v(" "),
-        _c("span", { staticStyle: { "font-size": "20px" } }, [
-          _vm._v("  umor ")
-        ])
+    return _c("div", { staticClass: "text-center text-blue" }, [
+      _c("span", { staticStyle: { "font-size": "40px" } }, [_vm._v("T")]),
+      _vm._v(" "),
+      _c("span", { staticStyle: { "font-size": "20px" } }, [
+        _vm._v("umor primario")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-sm-3  text-blue" }, [
-        _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
-          _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" N ")])
-        ])
+      _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
+        _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" N ")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-sm-3  text-blue" }, [
-        _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
-          _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
-        ])
+      _c("span", { staticStyle: { "font-size": "40px", color: "#8481b6" } }, [
+        _c("b", { staticStyle: { padding: "0" } }, [_vm._v(" M ")])
       ])
     ])
   }
