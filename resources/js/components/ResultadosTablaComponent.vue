@@ -9,33 +9,27 @@
    
  
       <div class="text-center text-blue"  >
-        <span style="font-size: 40px; color: #8481b6">T</span>  
-        
-     
-        <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> N </b> </span>  
-      
-        <span style="font-size: 40px;"> <b style="padding: 0">M</b>etasìs</span>  
+        <span style="font-size: 40px;">T</span>abla de Combinaciónes:
       </div>
+
+      <table class="table" >
+        <tr>
+          <td>T</td>
+          <td>N</td>
+          <td>M</td>
+          <td>Estadio</td>
+        </tr>
+
+        <tr  v-for="pregunta in preguntas"  >
+          <td>T</td>
+          <td>N</td>
+          <td>M</td>
+          <td>Estadio</td>
+        </tr>
+
+        
+      </table>
  
-
-
-     <div   v-for="pregunta in preguntas"  >
-
-        <div class="col-md-12   text-justify text-blue"  style="font-size: 10px">
-          <div class="btn btn-res"> 
-         
-            <input type="checkbox" v-on:change="changeRequest(pregunta.id)"   >
-            </div> 
-             {{pregunta.value}}: 
-             {{pregunta.des}} 
-         </div>
-
-         <br>
-
-      
-     
-
-    </div>
    
       
     </dir>
@@ -59,48 +53,35 @@
                 return {
                   respuesta: null, 
                   preguntas: null, 
-                  respuestaT: [] 
+                  respuestaT: [] , 
+                  respuestaM: [] , 
+                  respuestaN: [] , 
+
+
 
                  
                 }
               }, 
               mounted() {
 
-                if(!localStorage.categorias){
-                     axios.get('/v/get/categories').then(response =>  {
-                      localStorage.setItem('categorias', JSON.stringify(response.data));
-                    })
-
-                 }
-
-                 if(!localStorage.subcategorias){ 
-                     axios.get('/v/get/subcategories').then(response =>  {
-                      localStorage.setItem('subcategorias', JSON.stringify(response.data));
-                    })
-                }
-
-                 if(!localStorage.questions){
-                     axios.get('/v/get/questions').then(response =>  {
-                    localStorage.setItem('preguntas', JSON.stringify(response.data));
-                    })
-                 }
-
+       
 
                 this.respuesta = JSON.parse(localStorage.getItem('respuesta')); 
                 
                 let texto = "(nasofaringe,orofaringe e hipofaringe)"
                 this.respuesta.name = this.respuesta.name.replace(texto , "")
 
-                this.preguntas = JSON.parse(localStorage.getItem("preguntas") )
-
-             
+                this.preguntas = JSON.parse(localStorage.getItem("preguntas"))              
+                
+                this.respuestaT = JSON.parse(localStorage.getItem("respuestaT"))              
 
                 this.preguntas = this.preguntas.filter( (e ) => {
              
-                    if (e.type == 'M' && e.subcategories_id== this.respuesta.id )
+                    if (e.id == 'M' && e.subcategories_id== this.respuestaT.id )
                       return e; 
                 })
 
+                console.log(this.preguntas)
              
 
                 
@@ -130,7 +111,7 @@
                     let respuestaT =  JSON.stringify(this.respuestaT)
                   
                      localStorage.setItem('respuestaM', respuestaT ) ; 
-                     window.location.href = '#/rt'
+                     //window.location.href = '#/resultado'
                 }
         }
     }

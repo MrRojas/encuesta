@@ -21,6 +21,7 @@ var router = new VueRouter({
    		 { path: '/pt', name: 'pregunta-t', component: require('./components/PreguntaTComponent.vue').default },
    		 { path: '/pn', name: 'pregunta-n', component: require('./components/PreguntaNComponent.vue').default },
    		 { path: '/pm', name: 'pregunta-m', component: require('./components/PreguntaMComponent.vue').default },
+   		 { path: '/rt', name: 'resultado-tabla', component: require('./components/ResultadosTablaComponent.vue').default },
     ],
 });
 
