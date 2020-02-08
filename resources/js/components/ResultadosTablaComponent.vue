@@ -63,7 +63,7 @@
                 }
               }, 
               mounted() {
-
+ 
        
 
                 this.respuesta = JSON.parse(localStorage.getItem('respuesta')); 
@@ -74,6 +74,8 @@
                 this.preguntas = JSON.parse(localStorage.getItem("preguntas"))              
                 
                 this.respuestaT = JSON.parse(localStorage.getItem("respuestaT"))              
+                this.respuestaM = JSON.parse(localStorage.getItem("respuestaM"))              
+                this.respuestaN = JSON.parse(localStorage.getItem("respuestaN"))              
 
                 this.preguntas = this.preguntas.filter( (e ) => {
              
@@ -81,7 +83,19 @@
                       return e; 
                 })
 
-                console.log(this.preguntas)
+
+                 let params = { 
+                  respuestaT : this.respuestaT ,  
+                  respuestaN : this.respuestaN ,  
+                  respuestaM : this.respuestaM   
+                  }; 
+
+                 axios.post('/v/get/result' , params ).then(response =>  {
+                    localStorage.setItem('tablaResultado', JSON.stringify(response.data))
+                  
+                  });
+
+                
              
 
                 

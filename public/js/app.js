@@ -1871,6 +1871,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 }, _defineProperty(_mounted$data$mounted, "mounted", function mounted() {
   var _this = this;
 
+  localStorage.clear();
+
   if (!localStorage.categorias) {
     axios.get('/v/get/categories').then(function (response) {
       localStorage.setItem('categorias', JSON.stringify(response.data));
@@ -2341,10 +2343,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   this.respuesta.name = this.respuesta.name.replace(texto, "");
   this.preguntas = JSON.parse(localStorage.getItem("preguntas"));
   this.respuestaT = JSON.parse(localStorage.getItem("respuestaT"));
+  this.respuestaM = JSON.parse(localStorage.getItem("respuestaM"));
+  this.respuestaN = JSON.parse(localStorage.getItem("respuestaN"));
   this.preguntas = this.preguntas.filter(function (e) {
     if (e.id == 'M' && e.subcategories_id == _this.respuestaT.id) return e;
   });
-  console.log(this.preguntas);
+  var params = {
+    respuestaT: this.respuestaT,
+    respuestaN: this.respuestaN,
+    respuestaM: this.respuestaM
+  };
+  axios.post('/v/get/result', params).then(function (response) {
+    localStorage.setItem('tablaResultado', JSON.stringify(response.data));
+  });
 }), _defineProperty(_mounted$data$mounted, "methods", {
   changeRequest: function changeRequest(x, event) {
     var validar = true;
@@ -37840,7 +37851,7 @@ var render = function() {
                       attrs: { type: "checkbox" },
                       on: {
                         change: function($event) {
-                          return _vm.changeRequest(pregunta.id)
+                          return _vm.changeRequest(pregunta.value)
                         }
                       }
                     })
@@ -37949,7 +37960,7 @@ var render = function() {
                       attrs: { type: "checkbox" },
                       on: {
                         change: function($event) {
-                          return _vm.changeRequest(pregunta.id)
+                          return _vm.changeRequest(pregunta.value)
                         }
                       }
                     })
@@ -38058,7 +38069,7 @@ var render = function() {
                       attrs: { type: "checkbox" },
                       on: {
                         change: function($event) {
-                          return _vm.changeRequest(pregunta.id)
+                          return _vm.changeRequest(pregunta.value)
                         }
                       }
                     })

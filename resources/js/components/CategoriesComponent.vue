@@ -29,6 +29,8 @@
               }, 
               mounted() {
 
+                localStorage.clear()
+
                 if(!localStorage.categorias){
                      
                      axios.get('/v/get/categories').then(response =>  {

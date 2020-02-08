@@ -24,7 +24,7 @@
         <div class="col-md-12   text-justify text-blue"  style="font-size: 10px">
           <div class="btn btn-res"> 
          
-            <input type="checkbox" v-on:change="changeRequest(pregunta.id)"   >
+            <input type="checkbox" v-on:change="changeRequest(pregunta.value)"   >
             </div> 
              {{pregunta.value}}: 
              {{pregunta.des}} 

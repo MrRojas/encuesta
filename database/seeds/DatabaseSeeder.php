@@ -12,6 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+      $this->resultado();
+       
       	DB::table('users')->insert([
             [  'id' => '1', 'name' => 'ArmandoRojas' , 'email' => 'rojasarmando@gmail.com' , 'password' => bcrypt('12345678') ],
     
@@ -137,192 +140,8 @@ class DatabaseSeeder extends Seeder
             ]);
 
 
-         DB::table('result')->insert([
-              [ 'id' => '1', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVC' , 
-                'tratamiento' => 'Tratamiento  sistémico / Tto de soporte', 
-                 'm1'   => '1'  , 
-                 't1'   => '1'  , 
-                 't2'   => '1'  , 
-                 't3'   => '1'  , 
-                 't4a'   => '1'  , 
-                 't4b'   => '1'  , 
-                 't4'   => '1'  , 
-                 'nx'   => '1'  , 
-                 'n0'   => '1'  , 
-                 'n1'   => '1'  , 
-                 'n2'   => '1'  , 
-                 'n3'   => '1'  , 
-              ],
 
-              [ 'id' => '2', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVB' , 
-                'tratamiento' => 'RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
-                 'n3'   => '1'  , 
-                 'mo'   => '1'  , 
-                  't1'   => '1'  , 
-                 't2'   => '1'  , 
-                 't3'   => '1'  , 
-                 't4a'   => '1'  , 
-                 't4b'   => '1'  , 
-                 't4'   => '1'  ,  
-              ], 
-
-
-            [ 'id' => '3', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVB' , 
-                'tratamiento' => 'RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
-                  'nx'   => '1'  , 
-                 'n0'   => '1'  , 
-                 'n1'   => '1'  , 
-                 'n2'   => '1'  , 
-                 'n3'   => '1'  ,  
-              
-                 't4b'   => '1'  , 
-                 'no'   => '1'  ,  
-              ], 
-
-
-
-
-                [ 'id' => '4', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVA' , 
-                'tratamiento' => 'Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
-                  't1'   => '1'  , 
-                 'n2'   => '1'  , 
-                 'm0'   => '1'  , 
-                 
-              ], 
-               
-                [ 'id' => '5', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVA' , 
-                'tratamiento' => 'Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
-                  't2'   => '1'  , 
-                 'n2'   => '1'  , 
-                 'm0'   => '1'  , 
-                 
-              ], 
-               
-                [ 'id' => '6', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVA' , 
-                'tratamiento' => 'Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
-                  't3'   => '1'  , 
-                 'n2'   => '1'  , 
-                 'm0'   => '1'  , 
-                 
-              ], 
-               
-                [ 'id' => '7', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'IVA' , 
-                'tratamiento' => 'Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
-                  't4a'   => '1'  , 
-                 'n1'   => '1'  , 
-                 'n2'   => '1'  , 
-                 'n3'   => '1'  , 
-                 'm0'   => '1'  , 
-                 
-              ], 
-
-              
-                [ 'id' => '8', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'III' , 
-                'tratamiento' => 'Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico
-', 
-                  't1'   => '1'  , 
-                 't2'   => '1'  , 
-                 'n1'   => '1'  ,  
-                 'm0'   => '1'  , 
-                 
-              ],
-
-              [ 'id' => '9', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'III' , 
-                'tratamiento' => 'Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico
-', 
-                 't3'   => '1'  , 
-                 'n0'   => '1'  , 
-                 'n1'   => '1'  ,  
-                 'm0'   => '1'  , 
-                 
-              ], 
-
-                   [ 'id' => '10', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'II' , 
-                'tratamiento' => 'Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
-Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
-Si resecable: Cirugía seguido de:
-    1) RT, si no hay factores de mal pronóstico
-    2) RT+Tratamiento sistémico, si hay factores de mal ', 
-                 't3'   => '1'  , 
-                 'n0'   => '1'  , 
-                 'n1'   => '1'  ,  
-                 'm0'   => '1'  , 
-                 
-              ], 
-
-                [ 'id' => '11', 
-                'subcategories_id'  => '1' , 
-                'estadio' =>  'I' , 
-                'tratamiento' => '', 
-                 't3'   => '1'  , 
-                 'n0'   => '1'  , 
-                 'n1'   => '1'  ,  
-                 'm0'   => '1'  , 
-                 
-              ], 
-
-
-
-
-
-        ]);
-
-
-        DB::table('questions')->insert([
+      /* DB::table('questions')->insert([
              
              [ 'id' => '1', 
                 'subcategories_id'  => '1' , 
@@ -420,6 +239,205 @@ Si resecable: Cirugía seguido de:
 
             ]);
 
-
+*/
     }
+
+  function resultado(){
+
+         DB::table('result')->insert([
+              [ 'id' => '1', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVC' , 
+                'tratamiento' => 'Tratamiento  sistémico / Tto de soporte', 
+                 'm1'   => '1'  , 
+                 't1'   => '1'  , 
+                 't2'   => '1'  , 
+                 't3'   => '1'  , 
+                 't4a'   => '1'  , 
+                 't4b'   => '1'  , 
+                 't4'   => '1'  , 
+                 'nx'   => '1'  , 
+                 'n0'   => '1'  , 
+                 'n1'   => '1'  , 
+                 'n2'   => '1'  , 
+                 'n3'   => '1'  , 
+              ]] );
+
+          DB::table('result')->insert([
+
+              [ 'id' => '2', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVB' , 
+                'tratamiento' => 'RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
+                 'n3'   => '1'  , 
+                 'm0'   => '1'  , 
+                  't1'   => '1'  , 
+                 't2'   => '1'  , 
+                 't3'   => '1'  , 
+                 't4a'   => '1'  , 
+                 't4b'   => '1'  
+              ]  ] );
+
+            DB::table('result')->insert([
+            [ 'id' => '3', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVB' , 
+                'tratamiento' => 'RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
+                  'nx'   => '1'  , 
+                 'n0'   => '1'  , 
+                 'n1'   => '1'  , 
+                 'n2'   => '1'  , 
+                 'n3'   => '1'  ,  
+              
+                 't4b'   => '1'  , 
+                 'n0'   => '1'  ,  
+              ]]);
+DB::table('result')->insert([
+
+
+
+
+                [ 'id' => '4', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVA' , 
+                'tratamiento' => 'Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
+                  't1'   => '1'  , 
+                 'n2'   => '1'  , 
+                 'm0'   => '1'  , 
+                 
+              ]]);
+DB::table('result')->insert([
+               
+                [ 'id' => '5', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVA' , 
+                'tratamiento' => 'Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
+                  't2'   => '1'  , 
+                 'n2'   => '1'  , 
+                 'm0'   => '1'  , 
+                 
+              ]]);
+DB::table('result')->insert([
+               
+                [ 'id' => '6', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVA' , 
+                'tratamiento' => 'Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
+                  't3'   => '1'  , 
+                 'n2'   => '1'  , 
+                 'm0'   => '1'  , 
+                 
+              ]]);
+DB::table('result')->insert([
+               
+                [ 'id' => '7', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'IVA' , 
+                'tratamiento' => 'Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico', 
+                  't4a'   => '1'  , 
+                 'n1'   => '1'  , 
+                 'n2'   => '1'  , 
+                 'n3'   => '1'  , 
+                 'm0'   => '1'  , 
+                 
+              ]]);
+DB::table('result')->insert([
+
+              
+                [ 'id' => '8', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'III' , 
+                'tratamiento' => 'Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico
+', 
+                  't1'   => '1'  , 
+                 't2'   => '1'  , 
+                 'n1'   => '1'  ,  
+                 'm0'   => '1'  , 
+                 
+              ]
+        ]);    
+
+
+DB::table('result')->insert([
+              [ 'id' => '9', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'III' , 
+                'tratamiento' => 'Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si no resecable: RT+ tto sistémico / Quimioterapia de inducción seguido de RT+ tto sistémico
+', 
+                 't3'   => '1'  , 
+                 'n0'   => '1'  , 
+                 'n1'   => '1'  ,  
+                 'm0'   => '1'  , 
+                 
+              ]]);
+DB::table('result')->insert([
+
+                   [ 'id' => '10', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'II' , 
+                'tratamiento' => 'Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal pronóstico
+Valorar RT+Tto sistémico o QT inducción seguido de RT+Tto sistémico en función de las características individuales del paciente
+Si resecable: Cirugía seguido de:
+    1) RT, si no hay factores de mal pronóstico
+    2) RT+Tratamiento sistémico, si hay factores de mal ', 
+                 't3'   => '1'  , 
+                 'n0'   => '1'  , 
+                 'n1'   => '1'  ,  
+                 'm0'   => '1'  , 
+                 
+              ]]);
+DB::table('result')->insert([
+
+                [ 'id' => '11', 
+                'subcategories_id'  => '1' , 
+                'estadio' =>  'I' , 
+                'tratamiento' => '', 
+                 't3'   => '1'  , 
+                 'n0'   => '1'  , 
+                 'n1'   => '1'  ,  
+                 'm0'   => '1'  , 
+                 
+              ], 
+
+
+
+
+
+        ]);
+
+  }
 }
