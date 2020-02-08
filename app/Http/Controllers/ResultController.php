@@ -46,7 +46,7 @@ class ResultController extends Controller
      */
     public function show(Request $request)
     {     
-        $r = M::where("subcategories_id" , '=' , '1');
+        $r = M::where("subcategories_id" , '=' ,  $request->subcategories_id);
 
 
         foreach ($request->respuestaT as  $eT ) {
@@ -70,7 +70,48 @@ class ResultController extends Controller
             
         }
 
-         $r = $r->where("t2" , '=' , '1') ;
+        
+        foreach ($request->respuestaM as  $eN ) {
+           
+            if( $eN  == 'Nx' )
+                $r = $r->where("nx" , '=' , '1') ;
+
+            if( $eN  == 'N0' )
+                $r = $r->where("n0" , '=' , '1') ;
+
+            if( $eN  == 'N1' )
+                $r = $r->where("n1" , '=' , '1') ;
+
+            if( $eN  == 'N2' )
+                $r = $r->where("n2" , '=' , '1') ;
+
+            if( $eN  == 'N3' )
+                $r = $r->where("n3" , '=' , '1') ;
+
+                
+        }
+
+
+
+        foreach ($request->respuestaM as  $eM ) {
+           
+            if( $eM  == 'Mx' )
+                $r = $r->where("mx" , '=' , '1') ;
+
+            if( $eM  == 'M0' )
+                $r = $r->where("m0" , '=' , '1') ;
+
+            if( $eM  == 'M1' )
+                $r = $r->where("m1" , '=' , '1') ;
+
+            if( $eM  == 'M2' )
+                $r = $r->where("m2" , '=' , '1') ;
+
+            if( $eM  == 'M3' )
+                $r = $r->where("m3" , '=' , '1') ;
+
+                
+        }
 
         
         $resultado = $r->get();

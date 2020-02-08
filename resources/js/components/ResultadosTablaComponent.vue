@@ -87,7 +87,8 @@
                  let params = { 
                   respuestaT : this.respuestaT ,  
                   respuestaN : this.respuestaN ,  
-                  respuestaM : this.respuestaM   
+                  respuestaM : this.respuestaM ,
+                  subcategories_id : this.respuesta.id 
                   }; 
 
                  axios.post('/v/get/result' , params ).then(response =>  {

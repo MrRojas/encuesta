@@ -2351,7 +2351,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var params = {
     respuestaT: this.respuestaT,
     respuestaN: this.respuestaN,
-    respuestaM: this.respuestaM
+    respuestaM: this.respuestaM,
+    subcategories_id: this.respuesta.id
   };
   axios.post('/v/get/result', params).then(function (response) {
     localStorage.setItem('tablaResultado', JSON.stringify(response.data));
