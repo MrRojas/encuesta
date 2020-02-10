@@ -19,6 +19,10 @@ class AddResult extends Migration
             $table->text('tratamiento');
             
             $table->string('t1' , 1)->default('0');
+            
+            $table->string('t1a' , 1)->default('0');
+            $table->string('t1b' , 1)->default('0');
+            
             $table->string('t2' , 1)->default('0');
             $table->string('t3' , 1)->default('0');
             $table->string('t4a' , 1)->default('0');

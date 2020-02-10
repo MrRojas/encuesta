@@ -16,6 +16,8 @@ class Result extends Model
         'subcategories_id',
         'status',
          't1',
+         't1a',
+         't1b',
 		't2',
             't3',
             't4a',

@@ -29,6 +29,8 @@ class DatabaseSeeder extends Seeder
         $this->question1();
         $this->question2($i++);
         $this->question3($i++);
+        $this->question4($i++);
+        $this->question5($i++);
        
         $i = 2; 
 
@@ -45,12 +47,240 @@ class DatabaseSeeder extends Seeder
             [  'id' => '1', 'name' => 'Cancer Labio y Cavidad Oral'],
             [  'id' => '2', 'name' => 'Cancer Orofaringe P16 Negativa'],
             [  'id' => '3', 'name' => 'Cáncer Hipofaringe'],
-            [  'id' => '4', 'name' => 'Cáncer de seno paranasal y de cavidad nasal'],
-            [  'id' => '5', 'name' => 'Cáncer de glándulas salivales'],
+            [  'id' => '4', 'name' => 'Cáncer Laringe: Supraglotis'],
+            [  'id' => '5', 'name' => 'Cáncer Laringe: Glotis'],
             [  'id' => '6', 'name' => 'Cáncer de tiroides'],
         
           
         ]);
+  }
+
+  function question5($i = 0){
+      
+      $k = $i;
+      $i*= 20; 
+
+
+     DB::table('questions')->insert([
+             
+             [ 'id' => $i++, 
+                'subcategories_id'  => $k , 
+                'value' => 'T1',
+                'type' => 'T',
+                'des' => ' Tumor limitado a una zona de la supraglotis con movilidad normal de la cuerda vocal',
+              ], 
+
+
+             [ 'id' => $i++, 
+                'subcategories_id'  => $k , 
+                'value' => 'T1a',
+                'type' => 'T',
+                'des' => 'Tumor limitado a una cuerda vocal',
+              ], 
+
+                [ 'id' => $i++, 
+                'subcategories_id'  => $k , 
+                'value' => 'T1b',
+                'type' => 'T',
+                'des' => 'Tumor afecta ambas cuerdas vocales',
+              ], 
+
+               [ 'id' =>  $i++,
+                'subcategories_id'  => $k , 
+                'value' => 'T2',
+                'type' => 'T',
+                'des' => '  Tumor se extiende a supraglotis y/o subglotis, y/o afecta a la movilidad de las cuerdas vocales',
+              ], 
+
+
+               [ 'id' =>  $i++,
+                'subcategories_id'  => $k  , 
+                'value' => 'T3',
+                'type' => 'T',
+                'des' => 'Tumor limitado a la laringe con fijación de cuerda vocal y/o invade espacio paraglótico, y/o cara interna del cartílago tiroides',
+              ], 
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'T4a',
+                'type' => 'T',
+                'des' => 'Tumor invade la cara externa del cartílago tiroides y/o afecta tejidos más allá de la laringe',
+              ],
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  ,
+                'value' => 'T4b',
+                'type' => 'T',
+                'des' => 'Tumor invade el espacio preverteral, engloba la arteria carótida o estructuras mediastínicas',
+              ] ,
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'NX',
+                'type' => 'N',
+                'des' => 'Ganglios regionales no puede ser evaluados',
+              ],
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'N0',
+                'type' => 'N',
+                'des' => 'No afectación ganglionar regional',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'N1',
+                'type' => 'N',
+                'des' => 'Metástasis unilateral, en uno o más ganglios linfáticos, todos de 6 cms o menos en su dimensión mayor',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'N2',
+                'type' => 'N',
+                'des' => 'Metástasis en ganglios linfáticos bilaterales o contralaterales, todos de 6 cms o menos en su dimensión mayor',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'N3',
+                'type' => 'N',
+                'des' => 'metástasis en ganglio(s) linfático(s) con dimensión mayor de 6cms',
+              ]
+              ,
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'Mx',
+                'type' => 'M',
+                'des' => 'no evaluada la presencia de metástasis a distancia',
+              ],
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'M0',
+                'type' => 'M',
+                'des' => 'No metástasis a distancia',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'M1',
+                'type' => 'M',
+                'des' => 'Metástasis a distancia',
+              ]
+            
+
+
+            ]);
+  }
+
+
+    function question4($i = 0){
+      
+      $k = $i;
+      $i*= 20; 
+
+
+     DB::table('questions')->insert([
+             
+             [ 'id' => $i++, 
+                'subcategories_id'  => $k , 
+                'value' => 'T1',
+                'type' => 'T',
+                'des' => ' Tumor limitado a una zona de la supraglotis con movilidad normal de la cuerda vocal',
+              ], 
+
+               [ 'id' =>  $i++,
+                'subcategories_id'  => $k , 
+                'value' => 'T2',
+                'type' => 'T',
+                'des' => ' Tumor invade mucosa o más de una zona adyacente de la supraglotis o glotis o región fuera de la supraglotis sin fijación de la laringe',
+              ], 
+
+
+               [ 'id' =>  $i++,
+                'subcategories_id'  => $k  , 
+                'value' => 'T3',
+                'type' => 'T',
+                'des' => 'Tumor limitado a la laringe con fijación de la cuerda vocal y/o invade alguna de las estructuras siguientes: área postcricoidea, espacio preepiglótico, espacio paraglótico y/o cara interna del cartílago tiroides',
+              ], 
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'T4a',
+                'type' => 'T',
+                'des' => 'Tumor invade el cartílago tiroides y/o invade tejidos más allá de la laringe',
+              ],
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  ,
+                'value' => 'T4b',
+                'type' => 'T',
+                'des' => 'Tumor invade el espacio prevertebral, engloba la arteria carótida, o estructuras mediastínicas',
+              ] ,
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'NX',
+                'type' => 'N',
+                'des' => 'Ganglios regionales no puede ser evaluados',
+              ],
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'N0',
+                'type' => 'N',
+                'des' => 'No afectación ganglionar regional',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'N1',
+                'type' => 'N',
+                'des' => 'Metástasis unilateral, en uno o más ganglios linfáticos, todos de 6 cms o menos en su dimensión mayor',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'N2',
+                'type' => 'N',
+                'des' => 'Metástasis en ganglios linfáticos bilaterales o contralaterales, todos de 6 cms o menos en su dimensión mayor',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'N3',
+                'type' => 'N',
+                'des' => 'metástasis en ganglio(s) linfático(s) con dimensión mayor de 6cms',
+              ]
+              ,
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'Mx',
+                'type' => 'M',
+                'des' => 'no evaluada la presencia de metástasis a distancia',
+              ],
+
+              [ 'id' =>  $i++, 
+                'subcategories_id'  => $k  , 
+                'value' => 'M0',
+                'type' => 'M',
+                'des' => 'No metástasis a distancia',
+              ],
+
+              ['id' =>  $i++, 
+                'subcategories_id'  => $k  ,  
+                'value' => 'M1',
+                'type' => 'M',
+                'des' => 'Metástasis a distancia',
+              ]
+            
+
+
+            ]);
   }
   
   function question3($i = 0){
@@ -615,12 +845,12 @@ DB::table('result')->insert([
 
         ]);
 
-DB::table('result')->insert([
+      DB::table('result')->insert([
 
                 [ 'id' => $i++, 
                 'subcategories_id'  => $k , 
                 'estadio' =>  '0' , 
-                'tratamiento' => 'RT / Cirugía',  
+                'tratamiento' => 'Cirugía',  
                  'n0'   => '1'  ,   
                  'm0'   => '1'  , 
                  

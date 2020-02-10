@@ -53,6 +53,11 @@ class ResultController extends Controller
            
             if( $eT  == 'T1' )
                 $r = $r->where("t1" , '=' , '1') ;
+            
+            if( $eT  == 'T1a' )
+                $r = $r->where("t1a" , '=' , '1') ;
+            if( $eT  == 'T1b' )
+                $r = $r->where("t1b" , '=' , '1') ;
 
             if( $eT  == 'T2' )
                 $r = $r->where("t2" , '=' , '1') ;
