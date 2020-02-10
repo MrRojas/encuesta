@@ -9,10 +9,10 @@
    
  
       <div class="text-center text-blue"  >
-        <span style="font-size: 40px">T</span>  
-        <span style="font-size: 20px">umor primario</span>
+        <span style="font-size: 40px; color: #8481b6;">T</span>  
+      
      
-        <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> N </b> </span>  
+        <span style="font-size: 40px;"> <b style="padding: 0">N</b>òdulos</span>  
       
         <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> M </b> </span>  
       </div>
@@ -24,7 +24,7 @@
         <div class="col-md-12   text-justify text-blue"  style="font-size: 10px">
           <div class="btn btn-res"> 
          
-            <input type="checkbox" v-on:change="changeRequest(pregunta.id)"   >
+            <input type="checkbox" v-on:change="changeRequest(pregunta.value)"   >
             </div> 
              {{pregunta.value}}: 
              {{pregunta.des}} 

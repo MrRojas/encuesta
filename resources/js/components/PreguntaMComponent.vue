@@ -9,12 +9,12 @@
    
  
       <div class="text-center text-blue"  >
-        <span style="font-size: 40px">T</span>  
-        <span style="font-size: 20px">umor primario</span>
+        <span style="font-size: 40px; color: #8481b6">T</span>  
+        
      
         <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> N </b> </span>  
       
-        <span style="font-size: 40px; color: #8481b6"> <b style="padding: 0"> M </b> </span>  
+        <span style="font-size: 40px;"> <b style="padding: 0">M</b>etasìs</span>  
       </div>
  
 
@@ -24,7 +24,7 @@
         <div class="col-md-12   text-justify text-blue"  style="font-size: 10px">
           <div class="btn btn-res"> 
          
-            <input type="checkbox" v-on:change="changeRequest(pregunta.id)"   >
+            <input type="radio" name="nck" v-on:change="changeRequest(pregunta.value)"   >
             </div> 
              {{pregunta.value}}: 
              {{pregunta.des}} 
@@ -106,21 +106,10 @@
                 
             } ,
         methods: {
-                changeRequest: function (x , event ) {
+                changeRequest: function (x  ) {
                   
-                  let validar = true 
-                    
-                  for (var i = this.respuestaT.length - 1; i >= 0; i--) {
-                   
-                     if(this.respuestaT[i] == x ) 
-                        validar = false 
-                  }
-
-                  if(validar)
-                    this.respuestaT.push(x)
-                    else
-                    this.respuestaT.pop(x)  
-
+                
+                    this.respuestaT = x
                 
                 } , 
 
@@ -130,7 +119,7 @@
                     let respuestaT =  JSON.stringify(this.respuestaT)
                   
                      localStorage.setItem('respuestaM', respuestaT ) ; 
-                     //window.location.href = '#/pn'
+                     window.location.href = '#/rt'
                 }
         }
     }
